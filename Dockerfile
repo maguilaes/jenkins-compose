@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts-jdk17
+FROM jenkins/jenkins:lts
 # Switch to root user
 USER root
 # Install dependencies
