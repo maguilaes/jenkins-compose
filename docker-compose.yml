@@ -5,7 +5,7 @@ services:
       - "8080:8080"
       - "50000:50000"
     volumes:
-      - jenkins_home:/var/jenkins_home
+      - jenkins-home:/var/jenkins-home
       - /var/run/docker.sock:/var/run/docker.sock
     group_add:
       - "988"  # Replace with your host Docker group ID
@@ -13,4 +13,4 @@ services:
       # getent group docker
 
 volumes:
-  jenkins_home:
+  jenkins-home:
