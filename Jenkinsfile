@@ -22,9 +22,9 @@ pipeline {
                     sh " docker build -t ${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} ."
                 }
             }
-        }    
-    }
-    stage('Test') {
+        }   
+        
+        stage('Test') {
             steps {
                 script {
                     sh "sudo docker run --rm ${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} npm test"
