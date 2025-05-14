@@ -1,20 +1,12 @@
 pipeline {
-    agent any
+    agent { label 'docker-agent' }
     environment {
         DOCKER_IMAGE_NAME = 'maguilaes/jenkins-compose'
     }
-    agent{label 'docker-agent'}
-    pipeline {
-    agent any
-
-    environment {
-        DOCKER_IMAGE_NAME = "maguilaes/simple-nodejs"
-    }
-
-     stages {
+    stages {
         stage('Checkout') {
             steps {
-                git branch: '${env.BRANCH_NAME}', url: 'https://github.com/maguilaes/simple-nodejs.git'
+                git branch: '${env.BRANCH_NAME}', url: 'https://github.com/maguilaes/jenkins-compose.git'
             }
         }
 
@@ -33,4 +25,5 @@ pipeline {
                 }
             }
         } 
+    }
 }
