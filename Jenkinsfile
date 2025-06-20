@@ -8,4 +8,5 @@ pipeline {
                 git branch: '${env.BRANCH_NAME}', url: 'https://github.com/maguilaes/jenkins-compose.git'
             }
         }
+    }
 }
