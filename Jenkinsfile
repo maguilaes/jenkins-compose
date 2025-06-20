@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: '${env.BRANCH_NAME}', url: 'https://github.com/maguilaes/simple-nodejs.git'
+                git branch: '${env.BRANCH_NAME}', url: 'https://github.com/maguilaes/jenkins-compose.git'
             }
         }
 
